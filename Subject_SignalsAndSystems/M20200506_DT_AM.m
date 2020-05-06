@@ -23,8 +23,8 @@ ylabel('f(n)');
 grid on
 
 l = length(n);
-fft_carrier = fftshift(fft(carrier)/l);
-fft_message = fftshift(fft(message)/l);
+fft_carrier = abs(fftshift(fft(carrier)/l));
+fft_message = abs(fftshift(fft(message)/l));
 ft_axis_hz = fs * ((-l/2:(l/2) - 1)/l);
 
 subplot(2,2,2);
@@ -47,7 +47,7 @@ ylabel('m(n)');
 grid on
 
 
-fft_modulated= fftshift(fft(modulated)/l);
+fft_modulated= abs(fftshift(fft(modulated)/l));
 subplot(2,2,4);
 plot(ft_axis_hz, fft_modulated);
 legend("fft of modulated signal");
