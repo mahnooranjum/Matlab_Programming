@@ -14,4 +14,4 @@ x(t) = x1(t) + x2(t); T = sin(x(t)); y(t) = T; y_add = subs(y(t),t,val);
 hold on, grid on
 plot(val, y1+y2 ,'b:', 'LineWidth', 4)
 plot(val, y_add ,'r-', 'LineWidth', 2)
-legend("x(t)", "y(t)")
+legend("y1(t) + y2(t)", "y(t) = T {x1(t) + x2(t)}")
