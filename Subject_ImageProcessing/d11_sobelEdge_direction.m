@@ -1,7 +1,7 @@
 clear
 
 f = figure()
-I = imread('images/edge/moonstar.jpg');
+I = imread('images/edge/bts2.jpg');
 I = I(:,:,2);
 BW1 = edge(I,'sobel',0.08, 'vertical');
 figure;
