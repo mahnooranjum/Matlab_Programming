@@ -1,7 +1,7 @@
 clear
 
 f = figure()
-I = imread('images/segmentation/moonstar.jpg');
+I = imread('images/edge/moonstar.jpg');
 I = I(:,:,2);
 BW1 = edge(I,'sobel', 0.05);
 figure;
