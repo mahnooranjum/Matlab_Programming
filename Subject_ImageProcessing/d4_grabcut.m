@@ -4,7 +4,7 @@ f = figure()
 RGB = imread('images/segmentation/ice.jpg');
 subplot(2,2,1), imshow(RGB);
 
-L = superpixels(RGB,100,'NumIterations', 100);
+L = superpixels(RGB,50,'NumIterations', 10);
 s = size(RGB);
 figure(f), subplot(2,2,2), imshow(RGB), hold on
 h1 = drawpolygon(gca,'Position',[1,1; 1,s(1); s(2),s(1); s(2),1; 1,1]);
