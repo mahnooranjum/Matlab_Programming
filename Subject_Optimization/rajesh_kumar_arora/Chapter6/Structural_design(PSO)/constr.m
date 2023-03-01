@@ -1,0 +1,10 @@
+function [g] = constr(x)
+alpha = 0.4;
+length1 = 550;
+q = 15;
+sigma1 = 130;
+sigma2 = 130;
+sigma3 = 130;
+g(1) = (q*length1)/(2*x(1)^2) + (3*q*length1^2*x(1))/(6*x(1)^4 + 4*alpha*x(2)^4) - sigma1;
+g(2) = (x(1)^4*(x(2) + 6*alpha*length1)*q*length1) / (x(2)^3*(6*x(1)^4 + 4*alpha*x(2)^4)*2*alpha) - sigma2;
+g(3) = (x(1)^4*x(2) + alpha*length1*(3*x(1)^4+6*alpha*x(2)^4)*q*length1) / (x(2)^3*(6*x(1)^4 + 4*alpha*x(2)^4)) - sigma3;
